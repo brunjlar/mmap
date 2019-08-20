@@ -14,7 +14,7 @@ Category:      functional data structures
 library
     exposed-modules:
           Data.Map.Monoidal
-          Data.Set.NonEmpty
+        , Examples.Counter
     build-depends:
           base >= 4.11 && < 5
         , containers
