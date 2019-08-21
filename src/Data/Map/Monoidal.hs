@@ -37,13 +37,10 @@ newtype MMap a m = MMap (Map a (NonTrivial m))
 mat :: forall a m. (Ord a, Eq m, Monoid m) => a -> Lens' (MMap a m) m
 mat a = coercedTo @(Map a (NonTrivial m)) % at' a % re nonTrivial
 
-toIx :: Traversal s t a b -> IxTraversal () s t a b
-toIx t = itraversalVL $ \f -> traverseOf t (f ())
-
 mitraverse :: forall a m. IxTraversal' a (MMap a m) m
-mitraverse =    toIx (castOptic $ coercedTo @(Map a (NonTrivial m)))
-             %> itraversed
-             <% toIx (castOptic coerced)
+mitraverse =   coercedTo @(Map a (NonTrivial m))
+             % itraversed
+             % coerced
 
 toList :: MMap a m -> [(a, m)]
 toList = itoListOf mitraverse
