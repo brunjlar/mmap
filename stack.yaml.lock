@@ -20,6 +20,22 @@ packages:
     subdir: optics-core
     git: https://github.com/well-typed/optics.git
     commit: a29144984843e67215256c63155df7f201983d63
+- completed:
+    subdir: optics-th
+    cabal-file:
+      size: 1661
+      sha256: 4cd5e2abd6328d8509cc8a4ebac4a40950f66cd78b4af9b8555e34b5b1ff539f
+    name: optics-th
+    version: '0.1'
+    git: https://github.com/well-typed/optics.git
+    pantry-tree:
+      size: 601
+      sha256: da618eed59618e3f96e0a30e883e12f4f2128f9365cab68b219db5f523473e38
+    commit: a29144984843e67215256c63155df7f201983d63
+  original:
+    subdir: optics-th
+    git: https://github.com/well-typed/optics.git
+    commit: a29144984843e67215256c63155df7f201983d63
 snapshots:
 - completed:
     size: 499889

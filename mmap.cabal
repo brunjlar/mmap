@@ -15,10 +15,12 @@ library
     exposed-modules:
           Data.Map.Monoidal
         , Examples.Counter
+        , Examples.TripleStore
     build-depends:
           base >= 4.11 && < 5
         , containers
         , optics-core
+        , optics-th
     hs-source-dirs: src
     default-language: Haskell2010
     ghc-options: -Wall

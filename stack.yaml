@@ -8,3 +8,4 @@ extra-deps:
   commit: a29144984843e67215256c63155df7f201983d63
   subdirs:
    - optics-core
+   - optics-th
